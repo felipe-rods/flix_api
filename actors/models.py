@@ -1,17 +1,21 @@
 from django.db import models
 
 
-NATIONALITY_CHOICES = (
+COUNTRY_CHOICES = (
     ('USA', 'Estados Unidos'),
     ('BRAZIL', 'Brasil'),
+    ('SPAIN', 'Espanha'),
+    ('FRANCE', 'França'),
+    ('MEXICO', 'México'),
+    ('ARGENTINA', 'Argentina')
 )
 
 class Actor(models.Model):
     name = models.CharField(max_length=200)
     birthday = models.DateField(blank=True, null=True)
-    nationality = models.CharField(
+    country = models.CharField(
         max_length=100,
-        choices=NATIONALITY_CHOICES,
+        choices=COUNTRY_CHOICES,
         blank=True,
         null=True
         )
