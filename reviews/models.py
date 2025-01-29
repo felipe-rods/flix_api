@@ -1,6 +1,6 @@
 from django.db import models
-from movies.models import Movie
 from django.core.validators import MinValueValidator, MaxValueValidator
+from movies.models import Movie
 
 
 class Review(models.Model):
@@ -16,3 +16,6 @@ class Review(models.Model):
         ]
     )
     comment = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return self.movie
