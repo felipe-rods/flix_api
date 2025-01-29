@@ -15,5 +15,5 @@ urlpatterns = [
     path('actors/<int:pk>/', ActorRetrieveUpdateDestroyView.as_view(), name='actor-detail-view'),
 
     path('movies/', MovieListCreateView.as_view(), name='movie-create-list'),
-    path('movies/<int:pk>', MovieRetrieveUpdateDestroyView.as_view(), name='movie-detail-view')
+    path('movies/<int:pk>/', MovieRetrieveUpdateDestroyView.as_view(), name='movie-detail-view')
 ]
