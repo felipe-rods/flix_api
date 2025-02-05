@@ -7,7 +7,7 @@ class Movie(models.Model):
     title = models.CharField(max_length=300)
     genre = models.ForeignKey(
         Genre,
-        on_delete = models.PROTECT,
+        on_delete=models.PROTECT,
         related_name='movies'
     )
     release_date = models.DateField(blank=True, null=True)

@@ -10,6 +10,7 @@ COUNTRY_CHOICES = (
     ('ARGENTINA', 'Argentina')
 )
 
+
 class Actor(models.Model):
     name = models.CharField(max_length=200)
     birthday = models.DateField(blank=True, null=True)
@@ -18,7 +19,7 @@ class Actor(models.Model):
         choices=COUNTRY_CHOICES,
         blank=True,
         null=True
-        )
-    
+    )
+
     def __str__(self):
         return self.name

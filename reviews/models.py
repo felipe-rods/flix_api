@@ -5,10 +5,10 @@ from movies.models import Movie
 
 class Review(models.Model):
     movie = models.ForeignKey(
-        Movie, 
+        Movie,
         on_delete=models.PROTECT,
         related_name='reviews'
-        )
+    )
     rating = models.IntegerField(
         validators=[
             MinValueValidator(1, 'Rating cannot be lower than 1.'),
