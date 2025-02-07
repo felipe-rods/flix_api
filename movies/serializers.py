@@ -13,10 +13,16 @@ class MovieModelSerializer(serializers.ModelSerializer):
     def get_rating(self, obj):
         rating = obj.reviews.aggregate(Avg('rating'))['rating__avg']
         if rating:
-            return round(rating, 1)
+            return round(rating, 2)
         return None
 
     def validate_synopsis(self, value):
         if len(value) > 1000:
             raise serializers.ValidationError('Movie synopsis cannot be longer than 1000 characters.')
         return value
+
+
+class MovieListDetailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Movie
+        fields = '__all__'
