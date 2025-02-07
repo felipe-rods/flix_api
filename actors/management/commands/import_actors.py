@@ -21,7 +21,7 @@ class Command(BaseCommand):
             for row in reader:
                 name = row['name']
                 birthday = datetime.strptime(row['birthday'], '%Y-%m-%d').date()
-                country=row['country']
+                country = row['country']
 
                 self.stdout.write(self.style.NOTICE(name))
 
