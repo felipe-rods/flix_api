@@ -1,7 +1,7 @@
 # Flix-Api
 
 ## Descrição
-Flix-Api é uma API Restful que faz o CRUD de filmes, gêneros, atores e reviews.
+Flix-Api é uma API Restful que faz o CRUD de filmes, gêneros, atores e reviews, utilizando Python e Django Rest Framework.
 
 ## Instalação
 
@@ -15,7 +15,7 @@ Flix-Api é uma API Restful que faz o CRUD de filmes, gêneros, atores e reviews
     ```sh
     python -m venv venv
     source venv/bin/activate  # Para Linux/Mac
-    venv\Scripts\activate  # Para Windows
+    ./venv/Scripts/activate  # Para Windows
     ```
 
 3. Instale as dependências a partir do arquivo `requirements.txt`:
@@ -30,7 +30,7 @@ Para rodar a aplicação, use o comando:
 python manage.py runserver
 ```
 
-A aplicação estará disponível em `localhost:8000/api/v1/`.
+A aplicação estará disponível no endereço `localhost:8000/api/v1/`.
 
 ## Endpoints da API
 
@@ -50,11 +50,6 @@ Se você quiser contribuir com este projeto, siga os passos abaixo:
 4. Faça um push para o branch (`git push origin feature/nova-feature`).
 5. Abra uma Pull Request.
 
-## Licença
-
-Este projeto está licenciado sob a [MIT License](https://opensource.org/licenses/MIT).
-
 ## Contato
 
 Para suporte ou dúvidas, entre em contato através do email: [felipe.rs991@gmail.com](mailto:email@example.com).
-

@@ -18,7 +18,7 @@ COUNTRY_CHOICES = (
     ('IRELAND', 'Irlanda'),
     ('KENYA', 'Quênia'),
     ('EGYPT', 'Egito'),
-    
+    ('SWEDEN', 'Suécia')
 )
 
 
