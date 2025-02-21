@@ -28,18 +28,31 @@
 
 <h2 id="started">🚀 Início</h2>
 
-Aqui você descreve como rodar o seu projeto localmente.
-Here you describe how to run your project locally.
+Para acessar o projeto, é necessário cloná-lo do repositório do Github, criar o ambiente virtual, ativá-lo e instalar as suas dependências nele.
 
 <h2>Clonando</h2>
+
+Vá para o terminal e clone o repositório do Github:
 
 ```bash
 git clone https://github.com/felipe-rods/flix_api.git
 ```
 
+<h2>Criando e ativando o ambiente virtual</h2>
+
+No mesmo terminal, vá para a página do projeto, crie e ative o ambiente virtual:
+
+```bash
+cd pasta-do-projeto
+python -m venv venv
+
+source venv/bin/activate #ativar o ambiente virtual no Linux
+./venv/Scripts/activate #ativar o ambiente virtual no Windows
+```
+
 <h2>Iniciando o projeto</h2>
 
-Primeiramente, instale os requisitos:
+Instale os requisitos do projeto:
 
 ```bash
 pip install requirements.txt
@@ -47,7 +60,6 @@ pip install requirements.txt
 Então, ative o servidor:
 
 ```bash
-cd project-name
 python manage.py runserver
 ```
 
