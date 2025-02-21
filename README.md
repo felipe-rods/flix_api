@@ -37,21 +37,22 @@ Here you describe how to run your project locally.
 git clone https://github.com/felipe-rods/flix_api.git
 ```
 
-
-
 <h2>Iniciando o projeto</h2>
 
-How to start your project
+Primeiramente, instale os requisitos:
+
+```bash
+pip install requirements.txt
+```
+Então, ative o servidor:
 
 ```bash
 cd project-name
-npm some-command-to-run
+python manage.py runserver
 ```
 
 <h2 id="routes">📍 API Endpoints</h2>
 
-Aqui você pode listar as principais rotas de sua API, e quais as respostas esperadas.
-Here you can list the main routes of your API, and what are their expected request bodies.
 ​
 | route                | description                                          
 |----------------------|-----------------------------------------------------
