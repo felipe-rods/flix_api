@@ -1,6 +1,6 @@
-<h1 align="center" style="font-weight: bold;">Flix Api 💻</h1>
+<h1 style="font-weight: bold;">Flix Api 💻</h1>
 
-<p align="center">
+<p>
  <a href="#technologies">Tecnologias</a> • 
  <a href="#started">Iniciando</a> • 
  <a href="#routes">API Endpoints</a> •
