@@ -7,19 +7,19 @@
  <a href="#contribute">Contribuições</a>
 </p>
 
-O Flix Api é uma API desenvolvida em Django que permite realizar operações CRUD (Criar, Ler, Atualizar, Deletar) em um banco de dados de filmes. Além dos filmes, a API também gerencia informações sobre gêneros, atores e avaliações dos filmes, utilizando autenticação JWT.
+<b>O Flix Api é uma API desenvolvida em Django que permite realizar operações CRUD (Criar, Ler, Atualizar, Deletar) em um banco de dados de filmes. Além dos filmes, a API também gerencia informações sobre gêneros, atores e avaliações dos filmes, utilizando autenticação JWT.</b>
 
 <h2>Funcionalidades</h2>
 
-Filmes: Permite adicionar, visualizar, editar e deletar filmes.
+- Filmes: Permite adicionar, visualizar, editar e deletar filmes.
 
-Gêneros: Permite adicionar, visualizar, editar e deletar gêneros de filmes.
+- Gêneros: Permite adicionar, visualizar, editar e deletar gêneros de filmes.
 
-Atores: Permite adicionar, visualizar, editar e deletar atores.
+- Atores: Permite adicionar, visualizar, editar e deletar atores.
 
-Avaliações: Permite adicionar, visualizar, editar e deletar avaliações dos filmes.
+- Avaliações: Permite adicionar, visualizar, editar e deletar avaliações dos filmes.
 
-Autenticação JWT: Implementação de autenticação e autorização utilizando JSON Web Tokens.
+- Autenticação JWT: Implementação de autenticação e autorização utilizando JSON Web Tokens.
 
 <h2 id="technologies">💻 Tecnologias</h2>
 
