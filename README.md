@@ -1,7 +1,7 @@
 <h1 align="center" style="font-weight: bold;">Flix Api 💻</h1>
 
 <p align="center">
- <a href="#tech">Tecnologias</a> • 
+ <a href="#technologies">Tecnologias</a> • 
  <a href="#started">Iniciando</a> • 
  <a href="#routes">API Endpoints</a> •
  <a href="#contribute">Contribuições</a>
@@ -123,3 +123,5 @@ Here you will explain how other developers can contribute to your project. For e
 [💾 Commit pattern](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716)
 
 <h3>Licensa</h3>
+
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
