@@ -46,7 +46,7 @@ No mesmo terminal, vá para a página do projeto, crie e ative o ambiente virtua
 cd pasta-do-projeto
 python -m venv venv
 
-source venv/bin/activate #ativar o ambiente virtual no Linux
+source venv/bin/activate #ativar o ambiente virtual no Linux e macOS
 ./venv/Scripts/activate #ativar o ambiente virtual no Windows
 ```
 
@@ -63,13 +63,39 @@ Então, ative o servidor:
 python manage.py runserver
 ```
 
+<h2>Endereço Base</h2>
+
+Para acessar a API, use o seguinte endereço base:
+
+```
+http://localhost:8000/api/v1/
+```
+
 <h2 id="routes">📍 API Endpoints</h2>
 
-​
-| route                | description                                          
-|----------------------|-----------------------------------------------------
-| <kbd>GET /authenticate</kbd>     | retrieves user info see [response details](#get-auth-detail)
-| <kbd>POST /authenticate</kbd>    | authenticate user into the api see [request details](#post-auth-detail)
+### Movies
+
+- GET /movies/
+
+- - Descrição: Retorna uma lista de filmes.
+
+- GET /movies/{id}/
+
+- - Descrição: Retorna os detalhes de um filme específico.
+
+- POST /movies/
+
+- - Descrição: Cria um novo filme.
+
+- - Parâmetros:
+
+```Json
+{
+  "titulo": "Nome do Filme",
+  "genero": "Ação",
+  "ano": 2025
+}
+```
 
 <h2 id="get-auth-detail">GET /authenticate</h2>
 
