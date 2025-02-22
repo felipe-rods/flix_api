@@ -86,14 +86,14 @@ http://localhost:8000/api/v1/
   {
         "title": "Nome do filme",
         "genre": {
-            "id": "id do gênero" # precisa estar cadastrado
+            "id": "id do gênero" // Precisa estar cadastrado
         },
         "actors": [
             {
-                "id": "id do ator 1" # precisa estar cadastrado
+                "id": "id do ator 1" // Precisa estar cadastrado
             },
             {
-                "id": "id do ator 2" # precisa estar cadastrado
+                "id": "id do ator 2" // Precisa estar cadastrado
             }
         ],
         "release_date": "YYYY-MM-DD",
@@ -148,7 +148,7 @@ http://localhost:8000/api/v1/
   {
     "name": "Nome do ator",
     "birthday": "YYYY/MM/DD",
-    "country": "País de origem" # Entre os países em COUNTRY_CHOICES
+    "country": "País de origem" // Entre os países em COUNTRY_CHOICES de actors/models.py
   }
   ```
 
