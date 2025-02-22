@@ -95,6 +95,9 @@ http://localhost:8000/api/v1/
             {
                 "id": "id do ator 2"
             }
+            {
+                "id": "id do ator 3"
+            }
         ],
         "release_date": "YYYY-MM-DD",
         "synopsis": "Sinopse do filme"
@@ -117,7 +120,6 @@ http://localhost:8000/api/v1/
 
 - POST `genres/`
   - Descrição: cria um novo gênero.
-
   - Parâmetros:
 
   ```Json
@@ -148,7 +150,7 @@ http://localhost:8000/api/v1/
   {
     "name": "Nome do ator",
     "birthday": "YYYY/MM/DD",
-    "country": "País de origem" // Entre os países em COUNTRY_CHOICES de actors/models.py
+    "country": "País de origem"
   }
   ```
 
