@@ -11,13 +11,15 @@
 
 <h3>Funcionalidades</h3>
 
-- Filmes: Permite adicionar, visualizar, editar e deletar filmes.
+- Filmes: permite adicionar, visualizar, editar e deletar filmes.
 
-- Gêneros: Permite adicionar, visualizar, editar e deletar gêneros de filmes.
+- Gêneros: permite adicionar, visualizar, editar e deletar gêneros de filmes.
 
-- Atores: Permite adicionar, visualizar, editar e deletar atores.
+- Atores: permite adicionar, visualizar, editar e deletar atores.
 
-- Avaliações: Permite adicionar, visualizar, editar e deletar avaliações dos filmes.
+- Avaliações: permite adicionar, visualizar, editar e deletar avaliações dos filmes.
+
+- Estatísticas: permite visualizar o número total de filmes, quantos de cada gênero e o total e a média de análises. 
 
 - Autenticação JWT: Implementação de autenticação e autorização utilizando JSON Web Tokens.
 
@@ -188,6 +190,11 @@ http://localhost:8000/api/v1/
 
 - DELETE `reviews/{id}/`
   - Descrição: exclui uma avaliação existente.
+
+<h3>Estatísticas</h3>
+
+- GET `movies/stats`
+  - Descrição: visualiza as estatísticas de total de filmes, quantos de cada gênero e total e média das análises.
 
 <h3>Authentication</h3>
 
