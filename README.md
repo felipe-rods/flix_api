@@ -81,7 +81,7 @@ http://localhost:8000/api/v1/
   - Descrição: retorna uma lista de filmes.
 
 - POST `movies/`
-  - Descrição: cria um novo filme. Os campos "genre" e "actors" necessitam de gêneros e atores já cadastrados anteriormente. É possível selecionar mais de um ator.
+  - Descrição: cria um novo filme. Os campos "genre" e "actors" necessitam de gênero e atores já cadastrados anteriormente. É possível selecionar mais de um ator.
   - Parâmetros:
 
   ```Json
@@ -174,13 +174,13 @@ http://localhost:8000/api/v1/
   - Descrição: cria uma nova avaliação. É necessário que o filme avaliado já esteja cadastrado, para o campo "movie".
   - Parâmetros:
 
-```Json
-{
-  "movie": "Nome do filme avaliado",
-  "rating": "Número inteiro de 1 a 5",
-  "comment": "Comentários sobre o filme"
-}
-```
+  ```Json
+  {
+    "movie": "Nome do filme avaliado",
+    "rating": "Número inteiro de 1 a 5",
+    "comment": "Comentários sobre o filme"
+  }
+  ```
 
 - GET `reviews/{id}/`
   - Descrição: retorna os detalhes de uma avaliação específico.
