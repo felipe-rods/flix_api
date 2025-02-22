@@ -172,13 +172,13 @@ http://localhost:8000/api/v1/
   - Descrição: cria uma nova avaliação. É necessário que o filme avaliado já esteja cadastrado, para o campo "movie".
   - Parâmetros:
 
-```Json
-{
-  "movie": "Nome do filme avaliado",
-  "rating": "Número inteiro de 1 a 5",
-  "comment": "Comentários sobre o filme"
-}
-```
+  ```Json
+  {
+    "movie": "Nome do filme avaliado",
+    "rating": "Número inteiro de 1 a 5",
+    "comment": "Comentários sobre o filme"
+  }
+  ```
 
 - GET `reviews/{id}/`
   - Descrição: retorna os detalhes de uma avaliação específico.
