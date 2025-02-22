@@ -251,7 +251,7 @@ Agradecemos o seu interesse em contribuir! Siga estas etapas:
 
 ```bash
 git clone https://github.com/felipe-rods/flix_api.git
-cd seu-projeto
+cd flix_api
 ```
 
 2. Crie uma nova branch:
