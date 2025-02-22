@@ -79,21 +79,21 @@ http://localhost:8000/api/v1/
   - Descrição: retorna uma lista de filmes.
 
 - POST `movies/`
-  - Descrição: cria um novo filme.
+  - Descrição: cria um novo filme. Os campos "genre" e "actors" necessitam de gêneros e atores já cadastrados anteriormente. É possível selecionar mais de um ator.
   - Parâmetros:
 
   ```Json
   {
         "title": "Nome do filme",
         "genre": {
-            "id": "id do gênero" // Precisa estar cadastrado
+            "id": "id do gênero"
         },
         "actors": [
             {
-                "id": "id do ator 1" // Precisa estar cadastrado
+                "id": "id do ator 1"
             },
             {
-                "id": "id do ator 2" // Precisa estar cadastrado
+                "id": "id do ator 2"
             }
         ],
         "release_date": "YYYY-MM-DD",
@@ -141,7 +141,7 @@ http://localhost:8000/api/v1/
   - Descrição: retorna uma lista de atores.
 
 - POST `actors/`
-  - Descrição: cria um novo ator.
+  - Descrição: cria um novo ator. O campo "country" aceita os países determinados na variável COUNTRY_CHOICES, dentro de actors/models.py.
   - Parâmetros:
 
   ```Json
@@ -167,12 +167,12 @@ http://localhost:8000/api/v1/
   - Descrição: retorna uma lista de avaliações.
 
 - POST `reviews/`
-  - Descrição: cria uma nova avaliação.
+  - Descrição: cria uma nova avaliação. É necessário que o filme avaliado já esteja cadastrado, para o campo "movie".
   - Parâmetros:
 
 ```Json
 {
-  "movie": "Nome do filme avaliado", # filme já cadastrado
+  "movie": "Nome do filme avaliado",
   "rating": "Número inteiro de 1 a 5",
   "comment": "Comentários sobre o filme"
 }
