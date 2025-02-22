@@ -86,14 +86,14 @@ http://localhost:8000/api/v1/
   {
         "title": "Nome do filme",
         "genre": {
-            "id": 14 # id de um gênero já cadastrado
+            "id": "id do gênero" # precisa estar cadastrado
         },
         "actors": [
             {
-                "id": "id do ator 1, precisa estar cadastrado"
+                "id": "id do ator 1" # precisa estar cadastrado
             },
             {
-                "id": "id do ator 2, precisa estar cadastrado"
+                "id": "id do ator 2" # precisa estar cadastrado
             }
         ],
         "release_date": "YYYY-MM-DD",
