@@ -76,38 +76,47 @@ http://localhost:8000/api/v1/
 <h3>Movies</h3>
 
 - GET `movies/`
-  - Descrição: Retorna uma lista de filmes.
+  - Descrição: retorna uma lista de filmes.
 
 - POST `movies/`
-  - Descrição: Cria um novo filme.
+  - Descrição: cria um novo filme.
   - Parâmetros:
 
   ```Json
   {
-    "title": "Nome do Filme",
-    "genre": "Ação",
-    "release_date": "YYYY-MM-DD",
-    "actors": "id do ator 1"; "id do ator 2",
-    "synopsis": "Sinopse do filme"
-  }
+        "title": "Nome do filme",
+        "genre": {
+            "id": 14 # id de um gênero já cadastrado
+        },
+        "actors": [
+            {
+                "id": "id do ator 1, precisa estar cadastrado"
+            },
+            {
+                "id": "id do ator 2, precisa estar cadastrado"
+            }
+        ],
+        "release_date": "YYYY-MM-DD",
+        "synopsis": "Sinopse do filme"
+    }
   ```
 
 - GET `movies/{id}/`
-  - Descrição: Retorna os detalhes de um filme específico.
+  - Descrição: retorna os detalhes de um filme específico.
 
 - PUT `movies/{id}/`
-  - Descrição: Atualiza um filme existente.
+  - Descrição: atualiza um filme existente.
 
 - DELETE `movies/{id}/`
-  - Descrição: Exclui um filme existente.
+  - Descrição: exclui um filme existente.
 
 <h3>Gêneros</h3>
 
 - GET `genres/`
-  - Descrição: Retorna uma lista de gêneros.
+  - Descrição: retorna uma lista de gêneros.
 
 - POST `genres/`
-  - Descrição: Cria um novo gênero.
+  - Descrição: cria um novo gênero.
 
   - Parâmetros:
 
@@ -118,28 +127,28 @@ http://localhost:8000/api/v1/
   ```
 
 - GET `genres/{id}/`
-  - Descrição: Retorna os detalhes de um gênero específico.
+  - Descrição: retorna os detalhes de um gênero específico.
 
 - PUT `genres/{id}/`
-  - Descrição: Atualiza um gênero existente.
+  - Descrição: atualiza um gênero existente.
 
 - DELETE `genres/{id}/`
-  - Descrição: Exclui um gênero existente.
+  - Descrição: exclui um gênero existente.
 
 <h3>Atores</h3>
 
 - GET `actors/`
-  - Descrição: Retorna uma lista de atores.
+  - Descrição: retorna uma lista de atores.
 
 - POST `actors/`
-  - Descrição: Cria um novo ator.
+  - Descrição: cria um novo ator.
   - Parâmetros:
 
   ```Json
   {
     "name": "Nome do ator",
     "birthday": "YYYY/MM/DD",
-    "country": "País de origem"
+    "country": "País de origem" # Entre os países em COUNTRY_CHOICES
   }
   ```
 
@@ -163,7 +172,7 @@ http://localhost:8000/api/v1/
 
 ```Json
 {
-  "movie": "Nome do filme avaliado",
+  "movie": "Nome do filme avaliado", # filme já cadastrado
   "rating": "Número inteiro de 1 a 5",
   "comment": "Comentários sobre o filme"
 }
