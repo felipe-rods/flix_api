@@ -1,4 +1,4 @@
-<h1 style="font-weight: bold;">Flix Api 💻</h1>
+<h1 allign="center" style="font-weight: bold;">Flix Api 💻</h1>
 
 <p>
  <a href="#technologies">Tecnologias</a> • 
