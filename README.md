@@ -2,14 +2,14 @@
 
 <p>
  <a href="#technologies">Tecnologias</a> • 
- <a href="#started">Iniciando</a> • 
+ <a href="#started">Início</a> • 
  <a href="#routes">API Endpoints</a> •
  <a href="#contribute">Contribuições</a>
 </p>
 
-<b>O Flix Api é uma API desenvolvida em Django que permite realizar operações CRUD (Criar, Ler, Atualizar, Deletar) em um banco de dados de filmes. Além dos filmes, a API também gerencia informações sobre gêneros, atores e avaliações dos filmes, utilizando autenticação JWT.</b>
+<b>O Flix Api é uma API desenvolvida em Django que permite realizar operações CRUD (Criar, Ler, Atualizar, Deletar) em um banco de dados de filmes.</b>
 
-<h2>Funcionalidades</h2>
+<h3>Funcionalidades</h3>
 
 - Filmes: Permite adicionar, visualizar, editar e deletar filmes.
 
@@ -30,7 +30,7 @@
 
 Para acessar o projeto, é necessário cloná-lo do repositório do Github, criar o ambiente virtual, ativá-lo e instalar as suas dependências nele.
 
-<h2>Clonando</h2>
+<h3>Clonando o projeto</h3>
 
 Vá para o terminal e clone o repositório do Github:
 
@@ -38,7 +38,7 @@ Vá para o terminal e clone o repositório do Github:
 git clone https://github.com/felipe-rods/flix_api.git
 ```
 
-<h2>Criando e ativando o ambiente virtual</h2>
+<h3>Criando e ativando o ambiente virtual</h3>
 
 No mesmo terminal, vá para a página do projeto, crie e ative o ambiente virtual:
 
@@ -46,11 +46,11 @@ No mesmo terminal, vá para a página do projeto, crie e ative o ambiente virtua
 cd pasta-do-projeto
 python -m venv venv
 
-source venv/bin/activate #ativar o ambiente virtual no Linux e macOS
-./venv/Scripts/activate #ativar o ambiente virtual no Windows
+source venv/bin/activate # Linux e macOS
+./venv/Scripts/activate # Windows
 ```
 
-<h2>Iniciando o projeto</h2>
+<h3>Iniciando o projeto</h3>
 
 Instale os requisitos do projeto:
 
@@ -63,7 +63,7 @@ Então, ative o servidor:
 python manage.py runserver
 ```
 
-<h2>Endereço Base</h2>
+<h3>Endereço Base</h3>
 
 Para acessar a API, use o seguinte endereço base:
 
@@ -73,57 +73,164 @@ http://localhost:8000/api/v1/
 
 <h2 id="routes">📍 API Endpoints</h2>
 
-### Movies
+<h3>Movies</h3>
 
-- GET /movies/
+- GET `movies/`
+  - Descrição: Retorna uma lista de filmes.
 
-- - Descrição: Retorna uma lista de filmes.
+- POST `movies/`
+  - Descrição: Cria um novo filme.
+  - Parâmetros:
 
-- GET /movies/{id}/
+  ```Json
+  {
+    "title": "Nome do Filme",
+    "genre": "Ação",
+    "release_date": "YYYY-MM-DD",
+    "actors": "id do ator 1"; "id do ator 2",
+    "synopsis": "Sinopse do filme"
+  }
+  ```
 
-- - Descrição: Retorna os detalhes de um filme específico.
+- GET `movies/{id}/`
+  - Descrição: Retorna os detalhes de um filme específico.
 
-- POST /movies/
+- PUT `movies/{id}/`
+  - Descrição: Atualiza um filme existente.
 
-- - Descrição: Cria um novo filme.
+- DELETE `movies/{id}/`
+  - Descrição: Exclui um filme existente.
 
-- - Parâmetros:
+<h3>Gêneros</h3>
+
+- GET `genres/`
+  - Descrição: Retorna uma lista de gêneros.
+
+- POST `genres/`
+  - Descrição: Cria um novo gênero.
+
+  - Parâmetros:
+
+  ```Json
+  {
+    "genre": "Ação"
+  }
+  ```
+
+- GET `genres/{id}/`
+  - Descrição: Retorna os detalhes de um gênero específico.
+
+- PUT `genres/{id}/`
+  - Descrição: Atualiza um gênero existente.
+
+- DELETE `genres/{id}/`
+  - Descrição: Exclui um gênero existente.
+
+<h3>Atores</h3>
+
+- GET `actors/`
+  - Descrição: Retorna uma lista de atores.
+
+- POST `actors/`
+  - Descrição: Cria um novo ator.
+  - Parâmetros:
+
+  ```Json
+  {
+    "name": "Nome do ator",
+    "birthday": "YYYY/MM/DD",
+    "country": "País de origem"
+  }
+  ```
+
+- GET `actors/{id}/`
+  - Descrição: retorna os detalhes de um ator específico.
+
+- PUT `actors/{id}/`
+  - Descrição: atualiza um ator existente.
+
+- DELETE `actors/{id}/`
+  - Descrição: exclui um ator existente.
+
+<h3>Avaliações</h3>
+
+- GET `reviews/`
+  - Descrição: retorna uma lista de avaliações.
+
+- POST `reviews/`
+  - Descrição: cria uma nova avaliação.
+  - Parâmetros:
 
 ```Json
 {
-  "titulo": "Nome do Filme",
-  "genero": "Ação",
-  "ano": 2025
+  "movie": "Nome do filme avaliado",
+  "rating": "Número inteiro de 1 a 5",
+  "comment": "Comentários sobre o filme"
 }
 ```
 
-<h2 id="get-auth-detail">GET /authenticate</h2>
+- GET `reviews/{id}/`
+  - Descrição: retorna os detalhes de uma avaliação específico.
 
-**RESPONSE**
-```json
-{
-  "name": "Fernanda Kipper",
-  "age": 20,
-  "email": "her-email@gmail.com"
-}
-```
+- PUT `reviews/{id}/`
+  - Descrição: atualiza uma avaliação existente.
 
-<h2 id="post-auth-detail">POST /authenticate</h2>
+- DELETE `reviews/{id}/`
+  - Descrição: exclui uma avaliação existente.
 
-**REQUEST**
-```json
-{
-  "username": "fernandakipper",
-  "password": "4444444"
-}
-```
+<h3>Authentication</h3>
 
-**RESPONSE**
-```json
-{
-  "token": "OwoMRHsaQwyAgVoc3OXmL1JhMVUYXGGBbCTK0GBgiYitwQwjf0gVoBmkbuyy0pSi"
-}
-```
+A API oferece autenticação baseada em tokens para garantir a segurança das operações. Abaixo estão os endpoints disponíveis para o gerenciamento de tokens:
+
+- POST `authentication/token/`
+  - Descrição: gera um novo token de acesso. É necessário fornecer as credenciais de login (nome de usuário e senha).
+
+  ```Json
+  {
+    "username": "nome_de_usuário",
+    "password": "sua_senha"
+  }
+  ```
+
+  - Exemplo de resposta:
+
+  ```Json
+  {
+    "refresh": "token_de_refresh",
+    "access": "token_de_acesso"
+  }
+  ```
+
+- POST `authentication/token/verify/`
+  - Descrição: verifica a validade de um token de acesso. É necessário fornecer o token de acesso que se deseja verificar.
+
+
+  ```Json
+  {
+    "token": "token_de_acesso"
+  }
+  ```
+
+    - Exemplo de resposta:
+      - Sucesso: o token é válido.
+      - Erro: o token é inválido ou expirou.
+
+- POST `authentication/token/refresh/`
+  - Descrição: gera um novo token de acesso utilizando um token de refresh válido. É necessário um token de refresh válido.
+
+  ```Json
+  {
+    "refresh": "token_de_refresh"
+  }
+  ```
+  - Exemplo de resposta:
+
+  ```Json
+  {
+    "access": "novo_token_de_acesso"
+  }
+  ```
+
 
 <h2 id="contribute">📫 Contribuições</h2>
 
@@ -156,12 +263,12 @@ git push origin nome-da-branch
 
 5. Abra um Pull Request detalhando as suas modificações. Adicione uma captura de tela das mudanças e espere pela análise.
 
-<h2>Documentações que podem ajudar</h2>
+<h3>Documentações que podem ajudar</h3>
 
 [📝 How to create a Pull Request](https://www.atlassian.com/br/git/tutorials/making-a-pull-request)
 
 [💾 Commit pattern](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716)
 
-<h2>Licensa</h2>
+<h3>Licença</h3>
 
 Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
