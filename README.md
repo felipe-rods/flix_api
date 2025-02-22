@@ -79,7 +79,7 @@ http://localhost:8000/api/v1/
   - Descrição: retorna uma lista de filmes.
 
 - POST `movies/`
-  - Descrição: cria um novo filme. Os campos "genre" e "actors" necessitam de gêneros e atores já cadastrados anteriormente. É possível selecionar mais de um ator.
+  - Descrição: cria um novo filme. Os campos "genre" e "actors" necessitam de gênero e atores já cadastrados anteriormente. É possível selecionar mais de um ator.
   - Parâmetros:
 
   ```Json
