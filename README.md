@@ -25,7 +25,7 @@
 
 <h2 id="technologies">💻 Tecnologias</h2>
 
-- Python
+- Python ([Download](https://www.python.org/downloads/))
 - Django
 
 <h2 id="started">🚀 Início</h2>
@@ -59,6 +59,13 @@ Instale os requisitos do projeto:
 ```bash
 pip install requirements.txt
 ```
+
+Faça a migração do banco de dados:
+
+```bash
+python manage.py migrate
+```
+
 Então, ative o servidor:
 
 ```bash
