@@ -80,6 +80,16 @@ Para acessar a API, use o seguinte endereço base:
 http://localhost:8000/api/v1/
 ```
 
+<h3>Criando um superusuário</h3>
+
+Para acessar o painel administrativo do django, crie um superusuário:
+
+```bash
+python manage.py createsuperuser
+```
+
+Siga as instruções para definir o nome de usuário, e-mail e senha. Para acessar o painel administrativo, use o endpoint `admin/`.
+
 <h2 id="routes">📍 API Endpoints</h2>
 
 <h3>Movies</h3>
